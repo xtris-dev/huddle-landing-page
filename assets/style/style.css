@@ -1,0 +1,174 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* VARIABLES CSS */
+:root {
+    /* Primary colors */
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* BASIC SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background: url(../img/bg-desktop.svg) no-repeat;
+    background-color: var(--violet);
+    background-size: cover;
+    background-position: left;
+    height: 100vh;
+    font-size: 1.7rem;
+}
+
+/* ===== MAIN CSS / DESKTOP FIRST ===== */
+main {
+    min-height: 100vh;
+    width: 89%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+main #logo {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    cursor: pointer;
+}
+main .social-icons {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+}
+
+/* CONTENT */
+.content {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.left-col {
+    width: 60%;
+}
+.left-col img {
+    width: 93%;
+}
+
+.right-col {
+    width: 35%;
+}
+.right-col h1, .right-col p {
+    font-family: 'Poppins', sans-serif;
+}
+.right-col h1 {
+    text-transform: capitalize;
+    font-size: 4rem;
+    line-height: 5.5rem;
+    margin-bottom: 2rem;
+}
+.right-col p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.right-col button {
+    margin-top: 2.5rem;
+    background: white;
+    color: var(--violet);
+    border: none;
+    outline: none;
+    padding: 1.5rem 6rem;
+    font-size: 1.8rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
+    transition: .2s ease;
+}
+.right-col button:hover {
+    background: var(--soft-magenta);
+    color: #fff;
+}
+
+.social-icons i {
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin: .5rem;
+    transition: .2s ease;
+}
+.social-icons i:hover {
+    color: var(--soft-magenta);
+    border: 1px solid var(--soft-magenta);
+}
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    body {
+        background: url(../img/bg-mobile.svg) no-repeat;
+        background-color: var(--violet);
+    background-size: contain;
+    background-position: top;
+    }
+    main #logo {
+        position: absolute;
+        top: 0;
+        width: 55%;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    main {
+        min-height: 100vh;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+    }
+    .left-col {
+        width: auto;
+    }
+    .left-col img {
+        width: 100%;
+    }
+    .right-col {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-col h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-top: 5rem;
+    }
+    .right-col p {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .right-col button {
+        text-align: center;
+        padding: 1.5rem 8rem;
+        font-size: 1.5rem;
+    }
+    main .social-icons {
+        position: absolute;
+        bottom: 5rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
